@@ -4,11 +4,11 @@ def my_find(collection)
   i = 0 
   block_return_values = [] 
   while i < collection.length 
-  yield(collection[i])
-  block_return_values << collection[i]
+  return(collection[i]) if
+    yield(collection[i])
   i +=1 
   end
-    if block_return_values.find
+  
 end 
 
 collection = (1..100).to_a
